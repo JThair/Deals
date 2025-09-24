@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JT Hair Salon | Deals & Specials</title>
+  <style>
+    :root {
+      --bg: #000;
+      --fg: #f7f7f7;
+      --muted: #bbb;
+      --gold: #ffcc00;
+      --card: #111;
+      --accentA: #ff0080;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+      padding: 12px 16px;
+      border-bottom: 1px solid #222;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .btn-link {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--fg);
+      color: var(--fg);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform .15s ease, background .15s ease, color .15s ease;
+    }
+    .btn-link:hover { transform: translateY(-1px); background: var(--fg); color: #000; }
+    h1, h2 {
+      text-align: center;
+      margin: 30px 0 15px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    main { max-width: 1100px; margin: 0 auto; padding: 10px 16px 40px; }
+    section {
+      padding: 20px;
+      border-bottom: 1px solid #222;
+    }
+    p.center { text-align: center; }
+
+    /* Coupon styles */
+    .coupon-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .coupon {
+      background: var(--card);
+      border: 2px dashed var(--gold);
+      padding: 20px;
+      border-radius: 12px;
+      width: 260px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255,204,0,0.35);
+    }
+    .coupon h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: var(--gold);
+    }
+
+    /* Holiday highlight block */
+    .highlight {
+      background: linear-gradient(135deg, var(--accentA), var(--gold));
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 1.15rem;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(255,0,128,0.65);
+      color: #fff;
+    }
+    .note {
+      font-size: 0.95rem;
+      margin-top: 10px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Form */
+    .form-wrap {
+      background: #0b0b0b;
+      border: 1px solid #1f1f1f;
+      border-radius: 14px;
+      padding: 22px;
+      max-width: 720px;
+      margin: 10px auto 30px;
+      box-shadow: 0 0 20px rgba(255,204,0,0.08);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .form-grid .full { grid-column: 1 / -1; }
+    label {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      background: #121212;
+      color: var(--fg);
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 1rem;
+      outline: none;
+      transition: border .15s ease;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+    .submit-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 8px;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: #000;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(255,204,0,0.35); }
+    .legal {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+    .legal a { color: var(--gold); text-decoration: underline; }
+
+    .contact {
+      text-align: center;
+      margin: 30px;
+      font-size: 1rem;
+    }
+    a { color: var(--gold); text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="topbar">
+      <a class="btn-link" href="http://jthair.art">← Back to Main Page</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>JT Hair Salon Deals & Specials</h1>
+
+    <!-- First Section: New Clients -->
+    <section>
+      <h2>🎉 First Time <a href="https://jthair.github.io/Booking/">Customers</a></h2>
+      <p class="center">
+        Enjoy <strong>10% off haircuts</strong> and <strong>20% off highlight coloring services</strong> on your first visit.<br />
+        To receive this offer, please register your contact information below.<br />
+        <em>This offer cannot be combined with other promotions.</em>
+      </p>
+      <div class="coupon-container">
+        <div class="coupon">
+          <h3>10% OFF</h3>
+          <p>Any Haircut</p>
+          <p><em>First Time <a href="https://jthair.github.io/Booking/">Customers</a> Only</em></p>
+        </div>
+        <div class="coupon">
+          <h3>20% OFF</h3>
+          <p>Highlight Coloring Service</p>
+          <p><em>First Time <a href="https://jthair.github.io/Booking/">Customers</a> Only</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Section: Referral -->
+    <section>
+      <h2>🤝 Referral Rewards</h2>
+      <p class="center">
+        We appreciate your referrals. For every <a href="https://jthair.github.io/Booking/">new client</a> you send to JT Hair:<br />
+        • Receive <strong>$15 off</strong> your next haircut, or<br />
+        • Receive <strong>$30 off</strong> your next highlight service.<br />
+        <em>Each reward applies to one visit only and cannot be combined with other offers.</em>
+      </p>
+    </section>
+
+    <!-- Third Section: Holiday Offers -->
+    <section>
+      <h2>🎄 Holiday Specials</h2>
+      <div class="highlight">
+        During the month of September<br />
+        ✨ 15% OFF your total bill ✨
+      </div>
+      <p class="note">
+        Big holidays are coming. Let us help you look and feel your best.<br />
+        <em>This offer cannot be combined with other discounts.</em>
+      </p>
+    </section>
+
+    <!-- Fourth Section: First Responders -->
+    <section>
+      <h2>🚓🚒 First Responders</h2>
+      <p class="center">
+        To all Firefighters, Police Officers, Military Members, and Medical Professionals, thank you for your service.<br />
+        Enjoy <strong>15% off</strong> your total bill year-round.<br />
+        <em>Active status and proof of service are required.</em>
+      </p>
+    </section>
+
+    <!-- Fifth Section: Students -->
+    <section>
+      <h2>🎓 Student Specials</h2>
+      <p class="center">
+        • Male students who book weekly haircuts receive <strong>20% off</strong> each visit.<br />
+        • Female students who schedule monthly trims receive <strong>20% off</strong> each visit.<br />
+        • Students booking highlight services. If you bring a <a href="https://jthair.github.io/Booking/">new client</a> who completes a highlight, you will receive <strong>30% off</strong> your next highlight appointment.<br />
+        <em>Discounts are single use and cannot be combined with other promotions.</em>
+      </p>
+    </section>
+
+    <!-- Sixth Section: Reviews -->
+    <section>
+      <h2>⭐ Google & Yelp Reviews</h2>
+      <p class="center">
+        For each Google or Yelp review, you will receive <strong>$5 off</strong> your next haircut or color service.<br />
+        <em>Please screenshot and text before booking to ensure the discount is applied.</em>
+      </p>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register">
+      <h2>📋 Register Your Offer</h2>
+      <div class="form-wrap">
+        <!--
+          This form uses FormSubmit to email entries to: johnny.q.thai@gmail.com
+          No server needed. Learn more: https://formsubmit.co/
+        -->
+        <form action="https://formsubmit.co/johnny.q.thai@gmail.com" method="POST">
+          <!-- FormSubmit options -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="JT Hair | Deals Registration">
+          <!-- Optional: redirect to thank-you page after submit -->
+          <!-- <input type="hidden" name="_next" value="https://jthair.art/thank-you.html"> -->
+
+          <div class="form-grid">
+            <div>
+              <label for="fullName">Full Name (as on ID)</label>
+              <input id="fullName" name="Full Name" type="text" placeholder="Your full legal name" required />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" type="tel" placeholder="e.g. 8328606584" pattern="[0-9]{10,}" required />
+            </div>
+
+            <div class="full">
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div>
+              <label for="service">Service You Want</label>
+              <select id="service" name="Service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Haircut</option>
+                <option>Highlight Coloring</option>
+                <option>Balayage / Foilayage</option>
+                <option>Treatment</option>
+                <option>Consultation Only</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="discount">Discount You Are Referring To</label>
+              <select id="discount" name="Discount" required>
+                <option value="" disabled selected>Select a discount</option>
+                <option>First Time 10% Haircut</option>
+                <option>First Time 20% Highlight</option>
+                <option>Referral $15 Haircut</option>
+                <option>Referral $30 Highlight</option>
+                <option>Holiday 15% September</option>
+                <option>First Responders 15%</option>
+                <option>Student 20% Weekly Haircut (Male)</option>
+                <option>Student 20% Monthly Trim (Female)</option>
+                <option>Student 30% Next Highlight (Bring New Client)</option>
+                <option>Review $5 Credit</option>
+              </select>
+            </div>
+
+            <div class="full">
+              <label for="notes">Notes (optional)</label>
+              <textarea id="notes" name="Notes" rows="3" placeholder="Anything we should know?"></textarea>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button class="btn-primary" type="submit">Submit Registration</button>
+            <span class="legal">Submitting does not confirm an appointment. Booking is separate.</span>
+          </div>
+
+          <div class="legal">
+            <p>
+              Please make sure all information is correct based on your ID and submit this form prior to your appointment for discounts to apply.
+              <a href="https://jthair.github.io/Booking/">New customers consultation</a> is required before booking.
+              To book or learn more, visit our <a href="https://jthair.github.io/Booking/">consultation</a> page.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <div class="contact">
+      <p>
+        All offers are <strong>non stackable</strong> and <strong>single use only</strong>.<br />
+        Questions. Text Johnny at <strong>832-860-6584</strong>.<br />
+        Keep visiting this page. Random offers are added. Thank you for trusting JT Hair.
+      </p>
+    </div>
+  </main>
+</body>
+</html>
